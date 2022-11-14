@@ -1,4 +1,4 @@
-##### Краткое содержание курса:
+##### Темы:
 
 1. [Базовая комбинаторика, биномиальная теорема.](./topics/1_basic_combinatorics_binomial_theorem/1_basic_combinatorics_binomial_theorem_pdf.pdf)
 2. Принцип включения и исключения и приложения.
