@@ -2,7 +2,7 @@
 
 1. [Базовая комбинаторика, биномиальная теорема.](./topics/1_basic_combinatorics_binomial_theorem/1_basic_combinatorics_binomial_theorem_pdf.pdf)
 2. [Принцип включения и исключения и приложения](./topics/2_inclusion_and_eclusion_principle_and_applications/2_inclusion_and_eclusion_principle_and_applications_pdf.pdf).
-3. Мощность множеств, счетное множество и их свойства.
+3. [Мощность множеств, счетное множество и их свойства.](topics/3_cardinality_of_sets_countable_set_and_their_properties/3_cardinality_of_sets_countable_set_and_their_properties.pdf)
 4. Несчетные множества, теорема Кантора.
 5. Бинарное отношение, эквивалентность.
 6. Упорядочивание, минимальный и максимальный элементы.
