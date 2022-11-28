@@ -1,0 +1,195 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{cmap}
+\usepackage{mathtext}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{indentfirst}
+\frenchspacing
+
+
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
+\usepackage{icomma}
+
+\DeclareMathOperator{\sgn}{\mathop{sgn}}
+
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}
+{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\usepackage{graphicx}
+\graphicspath{{images/}{images2/}}
+\setlength\fboxsep{3pt}
+\setlength\fboxrule{1pt}
+\usepackage{wrapfig}
+
+\usepackage{array,tabularx,tabulary,booktabs}
+\usepackage{longtable}
+\usepackage{multirow}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}[section]
+\newtheorem{proposition}[theorem]{Утверждение}
+ 
+\theoremstyle{definition}
+\newtheorem{corollary}{Следствие}[theorem]
+\newtheorem{problem}{Задача}[section]
+ 
+\theoremstyle{remark}
+\newtheorem*{nonum}{Решение}
+
+\usepackage{etoolbox}
+
+
+\usepackage{extsizes}
+\usepackage{geometry}
+	\geometry{top=25mm}
+	\geometry{bottom=35mm}
+	\geometry{left=35mm}
+	\geometry{right=20mm}
+
+\usepackage{setspace}
+
+\usepackage{lastpage}
+
+\usepackage{soul}
+
+\usepackage{hyperref}
+\usepackage[usenames,dvipsnames,svgnames,table,rgb]{xcolor}
+\hypersetup{
+    unicode=true,
+    pdftitle={Заголовок},
+    pdfauthor={Автор},
+    pdfsubject={Тема},
+    pdfcreator={Создатель},
+    pdfproducer={Производитель},
+    pdfkeywords={keyword1} {key2} {key3},
+    colorlinks=true,
+    linkcolor=red,
+    citecolor=black,
+    filecolor=magenta,
+    urlcolor=cyan
+}
+
+\usepackage{csquotes} % Еще инструменты для ссылок
+
+%\usepackage[style=authoryear,maxcitenames=2,backend=biber,sorting=nty]{biblatex}
+
+\usepackage{multicol} % Несколько колонок
+
+\usepackage{tikz} % Работа с графикой
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+
+\newcommand{\nl}{\\ \indent}
+
+%\author{}
+%\title{}
+%\date{}
+
+\begin{document} % конец преамбулы, начало документа
+
+%\input{./2_inclusion_and_eclusion_principle_and_applications.tex}
+\subsection*{5. Функции}
+\subsubsection*{\begin{center}
+Основные понятия
+\end{center}}
+\textbf{Обратное отношение} к отношению $R$ между 
+множествами $A$ и $B$ обозначается как $R^{-1}$; 
+оно является отношением между множества­ми 
+$B$ и $A$ и состоит из пар: 
+$R^{-1} = \left\{ (b, a) \, | \, 
+(a, b) \in R \right\}$.
+\nl
+Пусть $R$ -- отношение между множествами 
+$A$ и $B$ и $S$ -- отноше­ние между множеством 
+$B$ и третьим множеством $C$. 
+\textbf{Композици­ей} отношений $R$ и $S$ 
+называется отношение между 
+$A$ и $C$, которое определяется условием:
+\[
+S \circ R = 
+\left\{
+(a, c) \, | \,  a \in A, c \in C \; \text{и} \;
+a \, R \, b , \; b \, S \, c \; \text{для некоторого} \; b \in B 
+\right\}
+\]
+Пусть $M$ и $N$ -- 
+логические матрицы отношений $R$ и $S$ 
+соответственно. \textbf{Логическим} или 
+\textbf{булевым произведением 
+матриц} $MN$ называется логическая матрица композиции 
+$S \circ R$.
+\nl
+\textbf{Функцией}, определенной на множестве $A$ 
+со значениями в $B$, назы­вается отношение $f$ 
+между $A$ и $B$ при котором каждому элементу множества 
+$A$ ставится в соответствие единственный элемент из $B$.
+\nl
+Запись $f: A \longrightarrow B$ 
+обозначает функцию из множества $A$ в множе­ство $B$. 
+Множество $A$ при этом называют областью определения $f$,
+а $B$ -- областью значений функции $f$. 
+Мы пишем $y = f(x)$, чтобы подчеркнуть, 
+что $y \in B$ -- \textbf{значение функции} $f$, принимаемое
+на аргументе $x$. 
+Тот же $y$ еще называют \textbf{образом} $x$ 
+при отображе­нии $f$.
+\nl
+\textbf{Множеством значений} функции $f$ 
+называют подмножество в $B$:
+$f(A) = 
+\left\{
+f(x) \, | \, x \in A
+\right\}$ (не путайте с \emph{областью} значений).
+\nl
+Функция $f: A \longrightarrow B$ 
+называется \textbf{инъективной}, 
+если $f(a_1) = f(a_2) \Rightarrow a_1 = a_2$ 
+для всех $a_1, a_2 \in A$.
+\nl
+Функция $f : A \longrightarrow B$ называется
+\textbf{сюръективной}, 
+если ее множе­ство значений совпадает с областью значений. 
+Иначе говоря, если для каждого $b \in B$ найдется такой 
+$a \in A$, что $f(a) = b$.
+\nl
+Функцию, которая как инъективна, так и сюръективна, называют
+\textbf{биекцией} или \textbf{биективной}.
+\nl
+Если обратное отношение к функции $f$ снова функция, 
+то мы назы­ваем $f$ обратимой. 
+Функция $f : A \longrightarrow B$ обратима тогда и только
+тогда, когда она биективна. 
+Обратную функцию к $f$ мы обозначаем
+символом $f^{-1} : B \longleftrightarrow A$. 
+Если $f(a) = b$, то $f^{-1}(b) = a$.
+\newpage
+\subsection*{\begin{center}
+Демонстрационные задачи
+\end{center}}
+\begin{description}
+\item[1.]
+Функция $f: A \longrightarrow B$ 
+задана формулой: $f(x) = 1 + \frac{2}{x}$, 
+где $A$ обозначает множество вещественных чисел, 
+отличных от $О$, а $B$ -- множество вещественных чисел без $1$.
+Покажите, что $f$ биективна и найдите обратную к ней функцию.
+\item[2.] Пусть $f : A \longrightarrow B$ и 
+$g : B \longrightarrow C$ -- функции. Докажите, что
+\begin{description}
+\item[a)]
+если $f$ и $g$ инъективны, то $g \circ f$ тоже инъективна;
+\item[б)]
+если $f$ и $g$ сюръективны, то $g \circ f$ тоже сюръектива;
+\item[в)]
+если $f$ и $g$ обратимые функции, 
+то $(g \circ f)^{-1} = f^{-1} \circ g^{-1}$;
+\end{description}
+\end{description}
+\end{document}
+
+
+
+
+

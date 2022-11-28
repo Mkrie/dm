@@ -1,0 +1,189 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{cmap}
+\usepackage{mathtext}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{indentfirst}
+\frenchspacing
+
+
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
+\usepackage{icomma}
+
+\DeclareMathOperator{\sgn}{\mathop{sgn}}
+
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}
+{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\usepackage{graphicx}
+\graphicspath{{images/}{images2/}}
+\setlength\fboxsep{3pt}
+\setlength\fboxrule{1pt}
+\usepackage{wrapfig}
+
+\usepackage{array,tabularx,tabulary,booktabs}
+\usepackage{longtable}
+\usepackage{multirow}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}[section]
+\newtheorem{proposition}[theorem]{Утверждение}
+ 
+\theoremstyle{definition}
+\newtheorem{corollary}{Следствие}[theorem]
+\newtheorem{problem}{Задача}[section]
+ 
+\theoremstyle{remark}
+\newtheorem*{nonum}{Решение}
+
+\usepackage{etoolbox}
+
+
+\usepackage{extsizes}
+\usepackage{geometry}
+	\geometry{top=25mm}
+	\geometry{bottom=35mm}
+	\geometry{left=35mm}
+	\geometry{right=20mm}
+
+\usepackage{setspace}
+
+\usepackage{lastpage}
+
+\usepackage{soul}
+
+\usepackage{hyperref}
+\usepackage[usenames,dvipsnames,svgnames,table,rgb]{xcolor}
+\hypersetup{
+    unicode=true,
+    pdftitle={Заголовок},
+    pdfauthor={Автор},
+    pdfsubject={Тема},
+    pdfcreator={Создатель},
+    pdfproducer={Производитель},
+    pdfkeywords={keyword1} {key2} {key3},
+    colorlinks=true,
+    linkcolor=red,
+    citecolor=black,
+    filecolor=magenta,
+    urlcolor=cyan
+}
+
+\usepackage{csquotes} % Еще инструменты для ссылок
+
+%\usepackage[style=authoryear,maxcitenames=2,backend=biber,sorting=nty]{biblatex}
+
+\usepackage{multicol} % Несколько колонок
+
+\usepackage{tikz} % Работа с графикой
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+
+\newcommand{\nl}{\\ \indent}
+
+%\author{}
+%\title{}
+%\date{}
+
+\begin{document} % конец преамбулы, начало документа
+
+%\input{./2_inclusion_and_eclusion_principle_and_applications.tex}
+\subsection*{4. Отношения}
+\subsubsection*{Основные понятия}
+\textbf{Бинарным отношением} между множествами 
+$A$ и $B$ называется подмножество $R$ в $A \times B$. 
+Если $A = B$, то говорят, что $R$ -- \textbf{отно­шение} на $A$.
+\nl
+Бинарное отношение между конечными множествами может 
+быть описано на словах (при помощи подходящих предикатов), 
+как мно­жество упорядоченных пар, как орграф и с помощью матрицы.
+\nl
+Отношение $R$ на множестве $A$ называется
+\begin{description}
+\item \textbf{рефлексивыным}, 
+если $x \,R \, x$ для всех $x \in A$;
+\item \textbf{симметричным}, 
+если $x \, R \, y \Rightarrow y \, R \, x$ для всех 
+$x, y \in A$;
+\item \textbf{кососимметричным}
+если ($x \, R \, y$ и $y \, R \, x$ $\Rightarrow x = y$) 
+для всех $x, y \in A$;
+\item \textbf{транзитивным}, 
+если ($x \, R y$ и $y \, R \, z$ $\Rightarrow x \, R \, z $) 
+для всех $x, y, z \in A$
+\end{description}
+Отношение $R^*$ называют \textbf{замыканием отношения} 
+$R$ относитель­но свойства $P$, если
+\begin{description}
+\item[1)] $R^*$ обладает свойством $P$;
+\item[2)] $R \subset R^*$;
+\item[3)] $R^*$ -- подмножество любого другого отношения, содержащего $R$ и обладающего свойством $P$.
+\end{description}
+Рефлексивное, симметричное и транзитивное отношение 
+$R$ на мно­жестве $A$ называется 
+\textbf{отношением эквивалентности}. 
+\textbf{Классом эквивалентности} 
+элемента $x \in A$ является подмножество
+\[
+E_x = \{ x \in A \, | \, z \, R  \, x\}
+\]
+Разбиение множества $A$ представляет собой совокупность 
+под­множеств $A_1, A_2, \ldots , A_n$ в $A$, 
+удовлетворяющих требованиям:
+\[
+A = A_1 \cup A_2 \cup \ldots \cup A_n \; \text{и}
+\; A_i \cap A_j = \o \; \text{при} \; i \neq j 
+\]
+Подмножества $A_i$ из предыдущего определения называются 
+\textbf{блока­ми} разбиения. 
+Если $R$ -- отношение эквивалентности на $A$, 
+то раз­личные классы эквивалентности образуют 
+\textbf{разбиение} $A$.
+\nl
+Рефлексивное, кососимметричное и транзитивное отношение $R$ 
+на множестве $A$ называется \textbf{частичным порядком}.
+Множества, на которых определено такое отношение, 
+в свою очередь, называются
+\textbf{частично упорядоченными множествами.}
+\nl
+\textbf{Линейный порядок} на множестве -- 
+это такой частичный поря­док, 
+при котором можно сравнить любую пару элементов.
+\nl
+Если $R$ -- отношение частичного порядка на множестве 
+$A$ и $x \, R \, y$,  $x \neq y$, то $x$ называется
+\textbf{предшественником} $у$. 
+В том случае, ко­гда $x$ предшествует $y$ и нет такого элемента 
+$z$, для которого $x \, R \, z$ и $z \, R \, y$, то говорят, 
+что $x$ -- \textbf{непостредственный предшественник} $y$.
+Последний факт обозначают так: $x \prec y$.
+\newpage
+\subsection*{\begin{center}
+Демонстрационные задачи
+\end{center}}
+\begin{description}
+\item[1.] Ниже определены отношения на множествах. Опишите на
+словах замыкание по транзитивности в каждом случае.
+\begin{description}
+\item[(a)] $A = \mathbb{Z}$, $R$ задается условием: 
+$x \, R \, z$ тогда и только тогда, когда 
+$x -- y$ -- четное число;
+\item[(б)] $A = \mathbb{R}^2$ 
+задается по правилу: $(a, b) \, R \, (c, d)$ 
+в том слу­чае, когда $a^2 + b^2 = c^2 + d^2$.
+\end{description}
+\item[2.] Отношение $R$ на множестве 
+$\mathbb{Z}$ определяется так: 
+$x \, R \, y$ в том и только том случае, 
+когда $x^2 - y^2$ делится на $3$. 
+Покажите, что $R$ является отношением эквивалентности 
+и опишите классы эквивалентности.
+\end{description}
+\end{document}
+
+
+
+
+
