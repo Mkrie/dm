@@ -9,3 +9,4 @@
 
 ##### Тесты
 1. [Тест 1.](./topics/1_test/1_test.pdf)
+2. [Тест 2.](./topics/2_test/2_test.pdf)
