@@ -212,12 +212,29 @@ $(A, B) \in R$, если $A \subset B \cup \{ 1 \}$.
 \begin{description}
 \item[(a)] Определите, является ли $R$ рефлексивным
 или транзитивным.
+\begin{itemize}
+\item рефлексивность $ARA$: $A \subset A \cup \{ 1 \}$. 
+$\checkmark$
+\item транзитивность $ARB \wedge BRC \Rightarrow ARC$: \\
+$A \subset B \cup \{ 1 \} \; \wedge \; 
+B \subset C \cup \{ 1 \}
+\; \Rightarrow \; A \subset C \cup \{ 1 \}$. $\checkmark$
+\end{itemize}
 \item[(b)] Положим $B = \{ 2, 4 \}$.
-Сколько множеств $A$ удовлетворяет $(B, A) \in R^{-1}$? 
+Сколько множеств $A$ удовлетворяет $(B, A) \in R^{-1}$?
+\[
+b R^{-1} a \Leftrightarrow a R b
+\] 
+\[
+A \subset \overbrace{\underbrace{B}_{\{2, 4\}} \cup \{ 1 \}}^{
+\{ 1, 2, 4 \}} \quad \Longrightarrow \quad
+A = \mathcal{P}(\{ 1, 2, 4\})
+\]
 \end{description}
 \item[2.] Нарисуйте или обоснуйте, почему не существует
 непересекающийся граф с $6$ вершинами, в котором
-степени всех вершин равны $d(v) = 3$.
+степени всех вершин равны $d(v) = 3$. \\
+Это граф $K_{3, 3}$, который не является планарным.
 \item[3.] Пусть у нас есть полный граф $K_n$
 с вершинами $V = \{ 1, 2, \ldots , n \}$.
 Сколько путей длины $3$ ведёт между вершинами $1$ и $4$?
